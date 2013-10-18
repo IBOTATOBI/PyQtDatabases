@@ -21,6 +21,16 @@ class ShopWindow(QMainWindow):
         self.add_product = QAction("Add Product",self)
         self.browse_products = QAction("Browse Products",self)
 
+        #set keyboard shortcuts
+        self.open_database.setShortcut(QKeySequence("shift+O")) 
+        self.close_database.setShortcut(QKeySequence("shift+C"))
+        self.add_customer.setShortcut(QKeySequence("shift+A")) 
+        self.browse_customers.setShortcut(QKeySequence("shift+B")) 
+        self.add_order.setShortcut(QKeySequence("O")) 
+        self.browse_orders.setShortcut(QKeySequence("B")) 
+        self.add_product.setShortcut(QKeySequence("P"))
+        self.browse_products.setShortcut(QKeySequence("shift+P"))
+
         #create the menubar
         self.menu_bar = QMenuBar()
         self.database_menu = self.menu_bar.addMenu("Database")
